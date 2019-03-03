@@ -1,49 +1,42 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+// import React, { Component } from 'react' // We need to import react so we can make use of its .component class
+// import ReactDOM from 'react-dom' // ...and we need to import ReactDOM so we can create and test a virtual DOM with react!
 
 const BUTCHER_PRODUCTS = [
   'Tenderloin',
   'Short ribs',
   'Beef shin',
   'Ribeye'
-];
+]
 
 // Define these exported classes
-export class OlderCoaster extends React.Component {
-  render(){
-    return React.createElement('div',{ className: 'oldercoaster'},[
-        React.createElement('p',{},'Two grannies having the time of their life!'),
-        React.createElement('p',{},'Passengers:'),
-        React.createElement('ul',{},['Agnes','Muriel'].map((e)=>{
-          return React.createElement('li',{},e);
-        })
-    )]);
-  }
-};
-export class InFrontOfYou extends React.Component {
-  render(){
-    return React.createElement('div',{},[
-      React.createElement('p',{},"You shouldn't look too far."),
-      React.createElement('p',{},"Sometimes, the solution is right in front of you.")
-    ]);
-  }
-};
-export class ButcherShop extends React.Component {
-  render(){
-    return React.createElement('div',{className: 'butcher-shop'},[
-      React.createElement('p',{},'Hello! We have the following products for sale today:'),
-      React.createElement('ul',{},BUTCHER_PRODUCTS.map((e)=>{
-          return React.createElement('li',{},e);
-      }))
-    ]);
-  }
-};
+export class OlderCoaster extends Component {
 
-ReactDOM.render(
-  React.createElement('div', {}, [
-    React.createElement(OlderCoaster),
-    React.createElement(InFrontOfYou),
-    React.createElement(ButcherShop)
-  ]),
-  document.getElementById('global')
-);
+  // this function should return the JSX we want the DOM to render
+  // render() {
+  //   return (
+  //     <div>Hello!</div>
+  //   )
+  // }
+  //
+}
+
+export class InFrontOfYou extends Component {
+  // your code here
+}
+
+export class ButcherShop extends Component {
+  // your code here
+}
+
+
+export class App extends Component {
+  render() {
+    return (
+      <div id="app">
+
+      </div>
+    )
+  }
+}
+
+ReactDOM.render(<App />, document.getElementById('root'))
